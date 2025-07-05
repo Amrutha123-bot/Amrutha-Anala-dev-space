@@ -50,6 +50,7 @@ h1 {
     display : none;
     padding-left : 8px;
     padding-bottom : 2px;
+
 }
 #about{
     display : flex;
@@ -243,7 +244,7 @@ h3{
         display: block;
     }
     #symbol{
-        display : table;
+        display : none;
     }
 }
 /* extra large */
@@ -252,7 +253,7 @@ h3{
         display : block;
     }
     #symbol{
-        display : block;
+        display : none;
     }
     #banner{
         height : 320px;
