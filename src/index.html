@@ -1,209 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web page</title>
-    <!-- <style>
-        h1 {
-            text-align : center;
-            color : darkblue;
+    <title>Jovian Careers | bootstrap </title>
+    <meta property="og:title" content="Jovian Careers">
+    <meta property="og:description" content="Learn about job openings at Jovian and submit your application now">
+    <meta property="og:image" content="card.png">
+    <link rel="icon" href="jovian_logo.svg" type="image/x-icon" height="20">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-Xbg45MqvDIk1e563NLpGEulpX6AvL404DP+/iCgW9eFa2BqztiwTexswJo2jLMue" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #2990d4fc;
+            --secondary-color: #2ecc71;
+            --font-size: 20px;
         }
-    </style> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+        body {
+            /* background-color : var(--primary-color,#3498db); */
+            font-size: var(--font-size);
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            font-size: var(--font-size);
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="use_throw.css"> -->
 </head>
+
 <body>
-    <div id="symbol"><img src="jovian_symbol.jpg" alt="symbol" id="symbol" height="30"></div>
-    <div id="nav"><img src="jovian_logo.svg" alt="jovian_logo" id="logo" height="30"></div>
-    <img id="banner"  src="banner.jpg" alt="Banner" height="10">
-    <h1 style="text-align: center">About Jovian</h1>
-    <div id="about">
-        <div id="description">
-            <p >At Jovian, we're on a mission to build
-    the world's most highly reputed technical
-    university, and we're building completely
-    online. We offer several beginner friendly 
-    courses that are taken by <b>300,000+</b> registered
-    users. </p>
-            <p>We also offer 2 industry-focused bootcamps:
-                <ol>
-                    <li>
-                        <a href="https://www.jovian.com/full-stack-developer-bootcamp">
-                            Jovian Full Stack Developer Bootcamp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.jovian.com/data-science-bootcamp">
-                            Jovian Data Science Bootcamp
-                        </a>
-                    </li>
-                </ol>
-            </p>
-        </div>
-        <div >
-            <img src="team.jpg" alt="team" id="team">
-        </div>
+
+    <div>
+        <nav class="navbar navbar-expand-md shadow-sm">
+            <div class="container-lg ">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="jovian_symbol.jpg" alt="Jovian logo" height="40" class="d-md-none " />
+                    <img id="logo-with-text" src="jovian_logo.svg" alt="Jovian logo" height="30"
+                        class="d-none d-md-inline">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="https://joivan.com/learn" target="_blank">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://jovian.com/learn" target="_blank">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://youtube.com/@jovianhq">Youtube</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="https://jovian.com/login" target="_blank">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <h2>Job Oppurtunities</h2>
-    <div id="jobs">
-        <table id="jobs-table">    <!-- border="1" -->
-            <tr class="jobs-header-row">
-                <th rowspan="2">Job detail</th>
-                <th colspan="2">Location</th>
-                <th rowspan="2">Salary</th>
-                <th rowspan="2">Posted On</th>
-            </tr>
-            <tr class="jobs-header-row">
-                <th>City</th>
-                <th>Country</th>
-            </tr>
-            <tr class="jobs-data-row">
-                <td>Frontend Developer</td>
-                <td>Bengaluru</td>
-                <td>India</td>
-                <td>₹12,00,000</td>
-                <td>Mar 3,2023</td>
-            </tr>
-            <tr class="jobs-data-row">
-                <td>Full Stack Developer</td>
-                <td>New Delhi</td>
-                <td>India</td>
-                <td>₹15,00,000</td>
-                <td>Feb 1,2023</td>
-            </tr>
-            <tr class="jobs-data-row">
-                <td>Data Scientist</td>
-                <td>San Francisco</td>
-                <td>US</td>
-                <td>$175,000</td>
-                <td>Dec 22,2023</td>
-            </tr>
-            <tr class="jobs-data-row">
-                <td>Machine Learning Engineer</td>
-                <td id="remote" colspan="2">Remote</td>
-                <td>$80,000</td>
-                <td>Sep 19,2023</td>
-            </tr>
-        </table>
-        <div id="jobs-list">
-            <div class="jobs">
-                <div class="job-title">Frontend Developer</div>
-                <div class="job-detail">Bengaluru, India</div>
-                <div class="job-detail">₹ 12,00,000</div>
-                <div class="job-detail">Posted Mar 3, 2023</div>
-            </div>
-            <div class="jobs">
-                <div class="job-title">Full Stack Developer</div>
-                <div class="job-detail">New Delhi, India</div>
-                <div class="job-detail">₹ 15,00,000</div>
-                <div class="job-detail">Posted Feb 1, 2023</div>
-            </div>
-            <div class="jobs">
-                <div class="job-title">Data Scientist</div>
-                <div class="job-detail">San Francisco, USA</div>
-                <div class="job-detail">$175,000</div>
-                <div class="job-detail">Posted Dec 22,2023</div>
-            </div>
-            <div class="jobs">
-                <div class="job-title">Machine Learning Engineer</div>
-                <div class="job-detail">Remote</div>
-                <div class="job-detail">$80,000</div>
-                <div class="job-detail">Posted Sep 19,2023</div>
+    <div>
+        <div class="container px-4 py-2">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-12 col-lg-6"> <img src="team.jpg"
+                        class="d-block mx-lg-auto img-fluid rounded mx-auto" alt="Bootstrap Themes" width="700"
+                        height="700" loading="lazy"> </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-center text-lg-end mb-lg-0">Work at Jovian
+                    </h1>
+                    <p class="lead">
+                        At Jovian, we're on a mission to build the world's most highly reputed technical university, and
+                        we're building it completely online. We offer several beginner friendly courses that are taken
+                        by 300,000+ registered user.
+                    </p>
+                    <p class="lead">We also offer 2 industry-focused bootcamps:</p>
+                    <p class="lead">
+                    <ol>
+                        <li>
+                            <a href="https://www.jovian.com/full-stack-developer-bootcamp">
+                                Jovian Full Stack Developer Bootcamp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.jovian.com/data-science-bootcamp">
+                                Jovian Data Science Bootcamp
+                            </a>
+                        </li>
+                    </ol>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div id="application">
-        <h2>Submit your application</h2>
-        <form id="application-form">
-            <div class="form-group" action="https://formbold.com/s/3wvKl" method="POST" enctype="mutlipart/form-data">
-                <label for="name">Full Name</label><br>
-                <input type="text" id="name" name="Full Name" required placeholder="John Doe">
+        <div class="container px-4 ">
+            <h2 class="text-center">Job Oppurtunities</h2>
+            <!-- jobs list -->
+            <div class="d-md-none">
+                <div class="card my-4">
+                    <div class="card-body my-2">
+                        <h5 class="card-title">Frontend Developer</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Bengaluru, India</h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Salary - ₹ 12,00,000</h6>
+                        <p class="card-text"><small class="card-text text-body-secondary">Posted on 3 Mar,2023</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <div class="card-body my-2">
+                        <h5 class="card-title">Full Stack Developer</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Delhi, India</h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Salary - ₹ 15,00,0000</h6>
+                        <p class="card-text"><small class="card-text text-body-secondary">Posted Feb 1, 2023</small></p>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <div class="card-body my-2">
+                        <h5 class="card-title">Data Scientist</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">San Francisco, US</h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Salary - $175,000</h6>
+                        <p class="card-text"><small class="card-text text-body-secondary">Posted Dec 22,2023</small></p>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <div class="card-body my-2">
+                        <h5 class="card-title">ML Engineer</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Remote</h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Salary - $80,000</h6>
+                        <p class="card-text"><small class="card-text text-body-secondary">Posted Sep 19,2023</small></p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label><br>
-                <input type="email" id="email" name="Email address"required placeholder="john_doe@srmap.edu.in">
+
+            <!-- jobs table -->
+            <div class="d-none d-md-block col-lg-8 offset-lg-2">
+                <table class="table table-bordered table-striped"> <!-- border="1" -->
+                    <tr class="table-primary text-center">
+                        <th rowspan="2">Job detail</th>
+                        <th colspan="2">Location</th>
+                        <th rowspan="2">Salary</th>
+                        <th rowspan="2">Posted On</th>
+                    </tr>
+                    <tr class="table-primary text-center">
+                        <th>City</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr class="jobs-data-row">
+                        <td>Frontend Developer</td>
+                        <td>Bengaluru</td>
+                        <td>India</td>
+                        <td>₹12,00,000</td>
+                        <td>Mar 3,2023</td>
+                    </tr>
+                    <tr class="jobs-data-row">
+                        <td>Full Stack Developer</td>
+                        <td>New Delhi</td>
+                        <td>India</td>
+                        <td>₹15,00,000</td>
+                        <td>Feb 1,2023</td>
+                    </tr>
+                    <tr class="jobs-data-row">
+                        <td>Data Scientist</td>
+                        <td>San Francisco</td>
+                        <td>US</td>
+                        <td>$175,000</td>
+                        <td>Dec 22,2023</td>
+                    </tr>
+                    <tr class="jobs-data-row">
+                        <td>Machine Learning Engineer</td>
+                        <td id="remote" colspan="2">Remote</td>
+                        <td>$80,000</td>
+                        <td>Sep 19,2023</td>
+                    </tr>
+                </table>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone</label><br>
-                <input type="tel" id="phone" name="phone" required placeholder="+91-9898989898">
-            </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth</label><br>
-                <input type="date" name="date of birth" id="dob" required placeholder="20-02-2002">
-            </div>
-            <div class="form-group">
-                <label for="position">Position applied for</label><br>
-                <select name="position" id="position">
-                    <option value="none" selected>Select position</option>
-                    <option value="Frontend">Frontend Developer</option>
-                    <option value="Backend">Backend Developer</option>
-                    <option value="ML Engineer">ML Engineer</option>
-                    <option value="Data scientist">Data Scientist</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="resume">Resume</label><br>
-                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
-            </div>
-            <div class="form-group">
-                <label for="cover letter">Cover Letter</label><br>
-                <textarea name="cover letter" id="cover letter" rows="5" placeholder="Explain what makes you suitable for this job..."></textarea>
-            </div>
-            <div class="form-group">
-                <label for="terms">
-                    <input type="checkbox" name="terms" id="terms">
-                    I agree to the terms and conditions
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit Application" >
-            </div>
-        </form>
-    </div>
-    <div id="footer">
-        <ul id="footer-links">
-            <li><a href="https://jovian.com/learn" target="_blank">Courses</a></li>
-            <li><a href="https://jovian.com/learn" target="_blank">Programs</a></li>
-            <li><a href="https://www.youtube.com/@jovianhq" target="_blank">Youtube</a></li>
-        </ul>
-        <span>&copy; 2025 Jovian</span>
-    </div>
+        </div>
+        <!-- application form -->
+        <div class="container px-4 mt-5">
+            <h2 class="text-center">Submit Your Application</h2>
+            <form action="hhtps://formbold.com/3wvkl" method="POST" class="col-lg-8 offset-lg-2"
+                enctype="multipart/form-data">
+                <div class="mb-3 col-sm-6">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required
+                        placeholder="john_doe@gmail.com">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3 col-sm-6">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" name="name" required placeholder="John Doe" id="fullname">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="+9198853331687" name="phone"
+                        required>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="position" class="form-label">Position applied for</label><br>
+                    <select name="position" id="position" class="form-select" required
+                        aria-label="Default select example">
+                        <option value="none" selected>Select position</option>
+                        <option value="Frontend">Frontend Developer</option>
+                        <option value="Backend">Backend Developer</option>
+                        <option value="ML Engineer">ML Engineer</option>
+                        <option value="Data scientist">Data Scientist</option>
+                    </select>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="resume" class="form-label">Resume</label><br>
+                    <input type="file" class="form-control" id="resume" name="resume" accept=".pdf, .doc, .docx"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="cover letter" class="form-label">Cover Letter</label><br>
+                    <textarea name="cover letter" class="form-control" id="cover letter" rows="5"
+                        placeholder="Explain what makes you suitable for this job..."></textarea>
+                </div>
+                <!-- <div class="mb-3 form-check">
+                    I agree to the terms and conditions.
+                    <label class="form-check-label">
+                                ISSUE ARAISED
+                        <input type="checkbox" id="terms" name="terms"class=form-check-input>
+                       
+                    </label>
+                </div> -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Courses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Programs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Youtube</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div>      
-            <a href="mailto:support@jovian.com?subject=Frontend" class="apply" >Apply</a>
-            <h3 class="job role">Frontend Developer</h3>
-            <div class="location">Bengaluru, India</div>
+<!-- gutter for the spacing between the rows and columns and finally the p to provide idk -->
+<!-- <div class="container" style="height : 200px; background-color : var(--bs-blue)">
+        <div class="row">
+            crazy offset  nothing worked don't know what happened
+            <div class="col-7 col-md-6" style="border : 1px solid black; background-color : ghostwhite; font-size : 30px">
+                box 1
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" style="border : 1px solid black; background-color : ghostwhite; font-size : 30px">
+                box 2
+            </div>
+            <div class="col-12 col-md-12 col-lg-4" style="border : 1px solid black; background-color : ghostwhite; font-size : 30px">
+                box 3
+            </div>
         </div>
-        <div>
-            <h3>Backend Developer</h3>
-            <a href="mailto:support@jovian.com?subject=Backend" class="apply">Apply</a>
-            <div class="location">Delhi, India</div>
-        </div>
-        <div>
-            <h3>Data Scientist</h3>
-            <a href="mailto:support@jovian.com?subject=Data Scientist" class="apply">Apply</a>
-           <div class="location ">Mumbai, India</div>     
-        </div></div> magins don't work for span
--->
+    </div> -->
+<!-- <div class="mt-3 mb-2">This divison of the top and the bottom margin</div>
+    <div class="p-4">This division has all the sides padding </div> -->
+<!-- <p class="fw-bold">This text is bold</p>
+    <p class="fst-italic">This text is italic</p>
+    <p class="text-end">This text is centered</p> -->
+<!-- <span class="d-inline-block justify-items-center align-items-center" >This span is an inline-block element</span>
+    <div class="d-none d-sm-block d-md-flex p-3 bg-primary  align-items-center justify-content-center" style="font-size : 30px; height : 300px">
+        <div>item 1</div>
+        <div>item 2</div>
+    </div> -->
